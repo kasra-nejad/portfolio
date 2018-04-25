@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,70 @@
   <link rel="stylesheet" href="./style.css">
   <title>Kasra Nejad</title>
 </head>
+
 <body>
-  <nav class="navbar">
-    <ul class="navbar__list">
-      <li class="navbar_listitem">Home</li>
-      <li class="navbar_listitem">About Me</li>
-      <li class="navbar_listitem">Portfolio</li>
-      <li class="navbar_listitem">Contact Me</li>
-    </ul>
-  </nav>
+  <div class="container">
 
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__list__item">About Me</li>
+        <li class="navbar__list__item">Portfolio</li>
+        <li class="navbar__list__item">Contact Me</li>
+      </ul>
+    </nav>
 
-  <script type="text/javascript" src="./script.js">
+    <div class="about" id="about">
+      <div class="about__logo">
+        <img class="about__logo__image" src="./images/logo.jpeg" alt="logo">
+        <div class="about__logo__tag">Cool tag goes here</div>
+      </div>
+      <div class="about__description">
+        <h3 class="about__description__title">About Me</h3>
+        <p class="about__description__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet commodo lacinia. Sed tincidunt fermentum lorem sed suscipit.<br> Sed venenatis consequat ligula, sit amet elementum est aliquam id. Praesent varius est dolor, et rhoncus
+          risus consectetur eget. Aenean euismod risus vitae massa tempus lobortis.<br> Vestibulum id finibus quam.
+        </p>
+      </div>
+    </div>
 
-  </script>
+    <div class="portfolio" id="portfolio">
+      <div class="portfolio__project">
+        <h5 class="portfolio__project__title">Restaurant</h5>
+        <img src="" alt="">
+        <p class="portfolio__project__skill"></p>
+      </div>
+
+      <div class="portfolio__project">
+        <h5 class="portfolio__project__title">Calculator</h5>
+        <img src="" alt="">
+        <p class="portfolio__project__skill"></p>
+      </div>
+
+      <div class="portfolio__project">
+        <h5 class="portfolio__project__title">Weather App</h5>
+        <img src="" alt="">
+        <p class="portfolio__project__skill"></p>
+      </div>
+
+      <div class="portfolio__project">
+        <h5 class="portfolio__project__title">Data Map</h5>
+        <img src="" alt="">
+        <p class="portfolio__project__skill"></p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <img src="" alt="" class="contact__list__picture">
+      <ul class="contact__list">
+        <li class="contact__list__item">Github</li>
+        <li class="contact__list__item">Linkedin</li>
+        <li class="contact__list__item">email</li>
+        <li class="contact__list__item">phone</li>
+      </ul>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>
