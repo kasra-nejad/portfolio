@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Play|Source+Code+Pro|Montserrat|Cabin");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 7.5vh;
+  background-color: #eee;
+  border-bottom: solid 1px #aaa;
+  opacity: 0.85; }
+  .navbar__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50px;
+    margin: auto 20%;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center; }
+    .navbar__list__item {
+      list-style-type: none;
+      font-family: 'Play', sans-serif; }
+      .navbar__list__item a {
+        color: #db0033;
+        text-decoration: none;
+        opacity: 1; }
+        .navbar__list__item a:hover {
+          color: black; }
+
+.container {
+  background-color: #f9f4f8; }
+
+.about {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/about-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 2px 3px #db0033; }
+  .about__container {
+    display: grid;
+    grid-template: repeat(10, 1fr)/repeat(15, 1fr);
+    width: 90%;
+    height: 88vh;
+    margin: 9.5vh auto;
+    background-color: #f9f4f8;
+    box-shadow: 0 1px 2px #eee; }
+    .about__container__logo {
+      display: grid;
+      grid-column: 12/15;
+      grid-row: 2/10;
+      grid-template-rows: repeat(4, 1fr);
+      position: relative;
+      left: -1em;
+      width: 20vw;
+      height: 71vh;
+      align-self: center;
+      background-color: #fff;
+      box-shadow: 0 2px 2px #a77e8c; }
+      .about__container__logo__stack {
+        color: #db0033;
+        text-align: center;
+        align-self: center;
+        font-size: 3em;
+        text-shadow: 1px 1px 2px #db0033; }
+    .about__container__description {
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-row: 6/-1;
+      grid-column: 1/10;
+      position: relative;
+      left: 4em; }
+      .about__container__description__title {
+        font-size: 3em;
+        font-family: 'Play', sans-serif;
+        color: #db0033;
+        padding-left: 0.25em;
+        text-shadow: 1px 1px 2px #db0033; }
+      .about__container__description__text {
+        display: grid;
+        grid-row: 2/5;
+        font-family: 'Cabin', sans-serif;
+        padding: 0.25em 1em;
+        align-items: center;
+        justify-items: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        background-color: #48016b;
+        box-shadow: 0 0 2px #48016b;
+        color: white; }
+
+.portfolio {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  height: 200vh;
+  margin-top: 2em;
+  background-color: #f9f4f8;
+  color: #db0033;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+  font-size: 1.2em; }
+
+.contact {
+  height: 25vh;
+  background-color: #db0033;
+  box-shadow: 0 -2px 2px #48016b; }
