@@ -1,46 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Play|Source+Code+Pro|Montserrat|Cabin');
-$customFuschia: rgb(219, 0, 51);
+@import url('https://fonts.googleapis.com/css?family=Play|Source+Code+Pro|Montserrat|Cabin|Maven+Pro');
+$customFuschia: #db0033;
 $customPurple: #48016b;
+$stackBgColor: #13030d;
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
 
-.navbar {
-  position: absolute;
-  width: 100%;
-  height: 7.5vh;
-  background-color: #eee;
-  border-bottom: solid 1px #aaa;
-  // box-shadow: 1px 2px 2px $customPurple;
-  opacity: 0.85;
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    height: 50px;
-    margin: auto 20%;
-    text-align: center;
-    justify-content: space-around;
-    align-items: center;
-
-    &__item {
-      list-style-type: none;
-      font-family: 'Play', sans-serif;
-
-      a {
-        color: $customFuschia;
-        text-decoration: none;
-        opacity: 1;
-
-        &:hover {
-          color: black;
-        }
-      }
-    }
-  }
 }
 
 .container {
@@ -51,77 +18,100 @@ $customPurple: #48016b;
   display: grid;
   width: 100%;
   height: 100vh;
-  background-image: url("../images/about-background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 2px 3px $customFuschia;
+  background: linear-gradient(to bottom, #33ccff 0%, #db0033 100%);
+  box-shadow: 0 2px 3px #004;
 
   &__container {
     display: grid;
-    grid-template: repeat(10,1fr) /repeat(15,1fr);
-    width: 90%;
-    height: 88vh;
-    margin: 9.5vh auto;
-    background-color: #f9f4f8;
-    box-shadow: 0 1px 2px #eee;
+    justify-items: center;
+    align-items: center;
+    grid-template: repeat(7,1fr) / repeat(6,1fr);
+    width: 94%;
+    height: 96vh;
+    margin: 2vh auto;
 
-    &__logo {
-      display: grid;
-      grid-column: 12/15;
-      grid-row: 2/10;
-      grid-template-rows: repeat(4,1fr);
+    &__title {
+      grid-column: 3/5;
+      grid-row: 1/5;
+      align-self: end;
       position: relative;
-      left: -1em;
-      width: 20vw;
-      height: 71vh;
-      align-self: center;
-      background-color: #fff;
-      box-shadow: 0 2px 2px #a77e8c;
-      &:hover {
-        background-color: $customPurple;
-      }
-      &__stack {
-        color: $customFuschia;
-        text-align: center;
-        align-self: center;
-        font-size: 3em;
-        text-shadow: 1px 1px 2px $customFuschia;
-        &:hover {
-          color: #fff;
-        }
-      }
-
+      bottom: -0.01em;
+      font-size: 16em;
+      letter-spacing: 0.02em;
+      font-family: 'Maven Pro', sans-serif;
+      color: #ddd4;
+      text-shadow: -3px 1px 50px #ddd3;
     }
 
     &__description {
-      display: grid;
-      grid-template-rows: repeat(5,1fr);
-      grid-row: 6/-1;
-      grid-column: 1/10;
-      position: relative;
-      left: 4em;
-
-      &__title {
-        font-size: 3em;
-        font-family: 'Play', sans-serif;
-        color: $customFuschia;
-        padding-left: 0.25em;
-        text-shadow: 1px 1px 2px $customFuschia;
-      }
+      grid-row: 5/6;
+      grid-column: 2/6;
+      align-self: end;
 
       &__text {
-        display: grid;
-        grid-row: 2/5;
         font-family: 'Cabin', sans-serif;
-        padding: 0.25em 1em;
-        align-items: center;
-        justify-items: center;
+        padding: 1em;
         font-size: 1.4em;
         font-weight: bold;
-        background-color: $customPurple;
-        box-shadow: 0 0 2px $customPurple;
-        color: white;
+        background-color: #bbb3;
+        color: $customPurple;
+        box-shadow: -2px 4px 5px #210031;
+        opacity: 0.95;
+        border-radius: 5px;
+      }
+    }
+
+    &__skills {
+      grid-column: 3/5;
+      grid-row: 6/7;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(3,1fr);
+      width: 100%;
+      height: 100%;
+
+      &__stack {
+        display: grid;
+        align-items: center;
+        color: $customPurple;
+        text-align: center;
+        align-self: end;
+        font-size: 3em;
+        text-shadow: -1px 1px 2px black;
+      }
+    }
+
+    &__arrow {
+      grid-column: 3/5;
+      grid-row: 7/-1;
+      align-self: end;
+      font-size: 2.5em;
+      text-decoration: none;
+      color: #eee7;
+      animation-name: spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
+      a{
+        text-decoration: none;
+        color:#eee7;
+        &:visited{
+          color:#eee7;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(180deg);
       }
     }
   }
@@ -133,32 +123,58 @@ $customPurple: #48016b;
   height: 200vh;
   margin-top: 4px;
   background-color: #f9f4f8;
-  justify-items:center;
+  justify-items: center;
   align-items: center;
 
   &__project {
     display: grid;
-    width: 35vw;
-    height: 80vh;
+    grid-template-rows: 0.25fr 1fr 0.5fr 0.25fr;
+    width: 48vw;
+    height: 98vh;
+    background-color: $stackBgColor;
     border: solid 1px #ccc;
-    box-shadow: 0px 2px 3px #bbb;
+    box-shadow: 0 2px 3px #000;
     text-align: center;
     font-family: 'Play', sans-serif;
     font-size: 1.2em;
     color: $customFuschia;
+
     &:nth-child(odd) {
-      margin-left: 4vw;
+      margin-left: 5px;
     }
+
     &:nth-child(even) {
-      margin-right: 4vw;
+      margin-right: 5px;
+    }
+
+    &__title {
+      align-self: center;
+    }
+
+    &__image {
+      border-radius: 3px;
+      margin: auto;
+      width: 90%;
+      height: 300px;
+    }
+
+    &__description {
+      align-self: center;
+    }
+
+    &__stack {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+
+      & i {
+        font-size: 1.5em;
+      }
     }
   }
-
 }
 
 .contact {
   height: 25vh;
   background-color: $customFuschia;
   box-shadow: 0 -2px 2px $customPurple;
-
 }
