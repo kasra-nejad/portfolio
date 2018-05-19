@@ -85,11 +85,12 @@ $stackBgColor: #13030d;
       grid-column: 3/5;
       grid-row: 7/-1;
       align-self: end;
+      padding: 0.25em;
       font-size: 2.5em;
       text-decoration: none;
       color: #eee7;
       animation-name: spin;
-      animation-duration: 1s;
+      animation-duration: 1000ms;
       animation-iteration-count: infinite;
 
       a{
@@ -128,23 +129,24 @@ $stackBgColor: #13030d;
 
   &__project {
     display: grid;
-    grid-template-rows: 0.25fr 1fr 0.5fr 0.25fr;
-    width: 48vw;
-    height: 98vh;
-    background-color: $stackBgColor;
-    border: solid 1px #ccc;
+    width: 49vw;
+    height: 99vh;
+    background-color: white;
+    border: solid 5px $customFuschia;
     box-shadow: 0 2px 3px #000;
     text-align: center;
     font-family: 'Play', sans-serif;
     font-size: 1.2em;
     color: $customFuschia;
 
-    &:nth-child(odd) {
-      margin-left: 5px;
-    }
-
-    &:nth-child(even) {
-      margin-right: 5px;
+    &__container{
+      display: grid;
+      grid-template-rows: 0.25fr 1fr 0.5fr 0.25fr;
+      align-self: center;
+      justify-self: center;
+      width: 98%;
+      height: 98%;
+      border: solid 5px #33ccff;
     }
 
     &__title {
@@ -154,9 +156,9 @@ $stackBgColor: #13030d;
     &__image {
       border-radius: 3px;
       margin: auto;
-      width: 90%;
-      height: 300px;
-    }
+      width: 80%;
+      height: 250px;
+          }
 
     &__description {
       align-self: center;
@@ -164,7 +166,8 @@ $stackBgColor: #13030d;
 
     &__stack {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      // grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
       & i {
         font-size: 1.5em;
@@ -174,7 +177,16 @@ $stackBgColor: #13030d;
 }
 
 .contact {
+  display: grid;
+  margin-top: 1em;
   height: 25vh;
   background-color: $customFuschia;
   box-shadow: 0 -2px 2px $customPurple;
+  &__list__picture{
+     width: 150px;
+     height: 150px;
+     border-radius: 100%;
+    align-self:center;
+    justify-self: center;
+  }
 }
