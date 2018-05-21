@@ -17,21 +17,33 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template: repeat(7, 1fr)/repeat(6, 1fr);
+    grid-template: 1fr 0.5fr repeat(5, 1fr)/repeat(6, 1fr);
     width: 94%;
     height: 96vh;
     margin: 2vh auto; }
     .about__container__title {
       grid-column: 3/5;
-      grid-row: 1/5;
-      align-self: end;
+      grid-row: 2/4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       position: relative;
-      bottom: -0.01em;
-      font-size: 16em;
+      top: 0.15em;
+      font-size: 7.3em;
       letter-spacing: 0.02em;
       font-family: 'Maven Pro', sans-serif;
       color: #ddd4;
       text-shadow: -3px 1px 50px #ddd3; }
+      .about__container__title :nth-child(1) {
+        display: grid;
+        grid-column: 1/2; }
+      .about__container__title :nth-child(2) {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        position: relative;
+        top: -0.30em;
+        left: -0.13em; }
     .about__container__description {
       grid-row: 5/6;
       grid-column: 2/6;
@@ -66,7 +78,7 @@
       grid-column: 3/5;
       grid-row: 7/-1;
       align-self: end;
-      padding: 0.25em;
+      padding: 0.1em 0.25em;
       font-size: 2.5em;
       text-decoration: none;
       color: #eee7;
@@ -91,7 +103,7 @@
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 4px;
+  margin-top: 1em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center; }
@@ -108,26 +120,32 @@
     color: #db0033; }
     .portfolio__project__container {
       display: grid;
-      grid-template-rows: 0.25fr 1fr 0.5fr 0.25fr;
+      grid-template-rows: 0.25fr 0.85fr 0.45fr 0.25fr;
       align-self: center;
       justify-self: center;
       width: 98%;
       height: 98%;
       border: solid 5px #33ccff; }
     .portfolio__project__title {
-      align-self: center; }
+      align-self: center;
+      font-size: 1.3em; }
     .portfolio__project__image {
       border-radius: 3px;
       margin: auto;
-      width: 80%;
+      width: 77%;
       height: 250px; }
     .portfolio__project__description {
-      align-self: center; }
+      font-size: 0.95em;
+      margin: 0 auto;
+      width: 80%; }
     .portfolio__project__stack {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-      .portfolio__project__stack i {
-        font-size: 1.5em; }
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+      .portfolio__project__stack__skill {
+        display: block;
+        width: 100%;
+        font-size: 1.5em;
+        text-shadow: 0 1px 2px #000; }
 
 .contact {
   display: grid;
