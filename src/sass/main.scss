@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Play|Source+Code+Pro|Montserrat|Cabin|Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Play|Gaegu|Source+Code+Pro|Montserrat|Cabin|Maven+Pro');
 $customFuschia: #db0033;
 $customPurple: #48016b;
 $stackBgColor: #13030d;
@@ -7,6 +7,7 @@ $stackBgColor: #13030d;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -46,7 +47,6 @@ $stackBgColor: #13030d;
       :nth-child(1) {
         display: grid;
         grid-column: 1/2;
-        // align-self: end;
       }
 
       :nth-child(2) {
@@ -56,7 +56,6 @@ $stackBgColor: #13030d;
         position: relative;
         top: -0.30em;
         left: -0.13em;
-        // align-self: baseline;
       }
     }
 
@@ -107,7 +106,7 @@ $stackBgColor: #13030d;
       text-decoration: none;
       color: #eee7;
       animation-name: spin;
-      animation-duration: 1000ms;
+      animation-duration: 1100ms;
       animation-iteration-count: infinite;
 
       a {
@@ -139,10 +138,12 @@ $stackBgColor: #13030d;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 1em;
+  margin-top: 0.5em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center;
+  // overflow-y: scroll;
+  // scroll-behavior: smooth;
 
   &__project {
     display: grid;
@@ -155,6 +156,30 @@ $stackBgColor: #13030d;
     font-family: 'Play', sans-serif;
     font-size: 1.2em;
     color: $customFuschia;
+
+    &:nth-child(odd){
+      position: relative;
+      left:-50vw;
+      transition: left 450ms ease-out;
+    }
+
+    &:nth-child(even){
+      position: relative;
+      right:-50vw;
+      transition: right 450ms ease-out;
+    }
+
+    &.active {
+      &:nth-child(odd){
+        position: relative;
+        left:0;
+      }
+
+      &:nth-child(even){
+        position: relative;
+        right:0;
+      }
+    }
 
     &__container {
       display: grid;
@@ -200,7 +225,7 @@ $stackBgColor: #13030d;
 
 .contact {
   display: grid;
-  margin-top: 1em;
+  margin-top: 0.5em;
   height: 25vh;
   background-color: $customFuschia;
   box-shadow: 0 -2px 2px $customPurple;

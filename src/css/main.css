@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Play|Source+Code+Pro|Montserrat|Cabin|Maven+Pro");
+@import url("https://fonts.googleapis.com/css?family=Play|Gaegu|Source+Code+Pro|Montserrat|Cabin|Maven+Pro");
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 .container {
   background-color: #f9f4f8; }
@@ -83,7 +84,7 @@
       text-decoration: none;
       color: #eee7;
       animation-name: spin;
-      animation-duration: 1000ms;
+      animation-duration: 1100ms;
       animation-iteration-count: infinite; }
       .about__container__arrow a {
         text-decoration: none;
@@ -103,7 +104,7 @@
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 1em;
+  margin-top: 0.5em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center; }
@@ -118,6 +119,20 @@
     font-family: 'Play', sans-serif;
     font-size: 1.2em;
     color: #db0033; }
+    .portfolio__project:nth-child(odd) {
+      position: relative;
+      left: -50vw;
+      transition: left 450ms ease-out; }
+    .portfolio__project:nth-child(even) {
+      position: relative;
+      right: -50vw;
+      transition: right 450ms ease-out; }
+    .portfolio__project.active:nth-child(odd) {
+      position: relative;
+      left: 0; }
+    .portfolio__project.active:nth-child(even) {
+      position: relative;
+      right: 0; }
     .portfolio__project__container {
       display: grid;
       grid-template-rows: 0.25fr 0.85fr 0.45fr 0.25fr;
@@ -149,7 +164,7 @@
 
 .contact {
   display: grid;
-  margin-top: 1em;
+  margin-top: 0.5em;
   height: 25vh;
   background-color: #db0033;
   box-shadow: 0 -2px 2px #48016b; }
