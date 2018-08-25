@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Play|Gaegu|Source+Code+Pro|Montserrat|Cabin|Maven+Pro');
+@import url("https://fonts.googleapis.com/css?family=Play|Gaegu|Source+Code+Pro|Montserrat|Cabin|Maven+Pro");
 $customFuschia: #db0033;
 $customPurple: #48016b;
 $stackBgColor: #13030d;
@@ -12,6 +12,7 @@ $stackBgColor: #13030d;
 
 .container {
   background-color: #f9f4f8;
+  overflow-x: hidden;
 }
 
 .about {
@@ -25,7 +26,7 @@ $stackBgColor: #13030d;
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template: 1fr 0.5fr repeat(5,1fr) / repeat(6,1fr);
+    grid-template: 1fr 0.5fr repeat(5, 1fr) / repeat(6, 1fr);
     width: 94%;
     height: 96vh;
     margin: 2vh auto;
@@ -38,24 +39,37 @@ $stackBgColor: #13030d;
       grid-template-rows: 1fr 1fr;
       position: relative;
       top: 0.15em;
-      font-size: 7.3em;
+      left: 0.13em;
+      font-size: 5.8em;
       letter-spacing: 0.02em;
-      font-family: 'Maven Pro', sans-serif;
+      font-family: "Maven Pro", sans-serif;
       color: #ddd4;
       text-shadow: -3px 1px 50px #ddd3;
+      transition: color 10 ease-in-out;
 
-      :nth-child(1) {
-        display: grid;
+      h2:nth-child(1) {
+        display: flex;
         grid-column: 1/2;
       }
 
-      :nth-child(2) {
-        display: grid;
+      h2:nth-child(2) {
+        display: flex;
         grid-column: 2/3;
         grid-row: 2/3;
         position: relative;
-        top: -0.30em;
+        top: -0.3em;
         left: -0.13em;
+      }
+
+      .letters {
+        color: #ddd4;
+        transition: color 100ms cubic-bezier(0.42, 0, 0.63, 0.86),
+          text-shadow 300ms cubic-bezier(0.42, 0, 0.63, 0.86);
+      }
+      .active-text {
+        color: rgb(230, 228, 228);
+        display: block;
+        text-shadow: 0px 0px 10px #fff;
       }
     }
 
@@ -65,15 +79,17 @@ $stackBgColor: #13030d;
       align-self: end;
 
       &__text {
-        font-family: 'Cabin', sans-serif;
         padding: 1em;
         font-size: 1.4em;
         font-weight: bold;
-        background-color: #bbb3;
-        color: $customPurple;
+        background-color: #7b080833;
+        text-align: center;
+        color: #21016b;
+        font-family: "Cabin", sans-serif;
         box-shadow: -2px 4px 5px #210031;
+        text-shadow: 0px 1px 1px #b19494ab;
         opacity: 0.95;
-        border-radius: 5px;
+        border-radius: 10px;
       }
     }
 
@@ -82,7 +98,7 @@ $stackBgColor: #13030d;
       grid-row: 6/7;
       display: grid;
       grid-auto-flow: column;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       width: 100%;
       height: 100%;
 
@@ -138,12 +154,10 @@ $stackBgColor: #13030d;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 0.5em;
+  margin-top: 0.4em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center;
-  // overflow-y: scroll;
-  // scroll-behavior: smooth;
 
   &__project {
     display: grid;
@@ -153,31 +167,31 @@ $stackBgColor: #13030d;
     border: solid 5px $customFuschia;
     box-shadow: 0 2px 3px #000;
     text-align: center;
-    font-family: 'Play', sans-serif;
+    font-family: "Play", sans-serif;
     font-size: 1.2em;
     color: $customFuschia;
 
-    &:nth-child(odd){
+    &:nth-child(odd) {
       position: relative;
-      left:-50vw;
-      transition: left 450ms ease-out;
+      left: -50vw;
+      transition: left 1050ms cubic-bezier(0.58, 0.01, 0.25, 0.82);
     }
 
-    &:nth-child(even){
+    &:nth-child(even) {
       position: relative;
-      right:-50vw;
-      transition: right 450ms ease-out;
+      right: -50vw;
+      transition: right 1050ms cubic-bezier(0.58, 0.01, 0.25, 0.82);
     }
 
     &.active {
-      &:nth-child(odd){
+      &:nth-child(odd) {
         position: relative;
-        left:0;
+        left: 0;
       }
 
-      &:nth-child(even){
+      &:nth-child(even) {
         position: relative;
-        right:0;
+        right: 0;
       }
     }
 
@@ -228,7 +242,7 @@ $stackBgColor: #13030d;
   margin-top: 0.5em;
   height: 25vh;
   background-color: $customFuschia;
-  box-shadow: 0 -2px 2px $customPurple;
+  box-shadow: 0 -2px 3px #004;
 
   &__list__picture {
     width: 150px;
@@ -236,5 +250,334 @@ $stackBgColor: #13030d;
     border-radius: 100%;
     align-self: center;
     justify-self: center;
+  }
+}
+@media (max-width: 1066px) {
+  .about__container {
+    &__title {
+      font-size: 5em;
+    }
+
+    &__description {
+      grid-column: 1/-1;
+
+      &__text {
+        font-size: 1.45em;
+      }
+    }
+  }
+
+  .portfolio {
+    &__project {
+      height: 99vh;
+    }
+  }
+
+  @media (max-height: 450px) {
+    .about__container__description__text {
+      font-size: 1em;
+    }
+  }
+
+  @media (max-height: 380px) {
+    .about__container {
+      &__title {
+        font-size: 3.25em;
+      }
+
+      &__skills {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
+@media (max-width: 780px) {
+  .about__container {
+    &__title {
+      font-size: 3.8em;
+    }
+
+    &__description {
+      grid-column: 1/-1;
+      &__text {
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  .portfolio {
+    height: 200%;
+    &__project {
+      height: 98%;
+      margin: 0.25em auto;
+      &__description {
+        font-size: 0.8em;
+      }
+
+      &__stack {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+    }
+  }
+
+  @media (max-height: 450px) {
+    .about__container {
+      &__title {
+        font-size: 2.75em;
+      }
+
+      &__description__text {
+        font-size: 1em;
+      }
+
+      &__skills {
+        font-size: 0.65em;
+      }
+    }
+
+    .portfolio {
+      height: 100%;
+      &__project {
+        height: 100%;
+      }
+    }
+    .contact {
+      height: 25%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .about__container {
+    &__title {
+      font-size: 2.8em;
+    }
+
+    &__description {
+      position: relative;
+      grid-row: 4/7;
+      grid-column: 1/-1;
+      bottom: 1em;
+      align-self: center;
+      text-align: center;
+
+      &__text {
+        font-size: 1.1em;
+      }
+    }
+
+    &__skills {
+      grid-column: 2/6;
+    }
+  }
+
+  @media (max-height: 450px) {
+    .about__container {
+      &__title {
+        font-size: 2.5em;
+      }
+
+      &__description__text {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @media (max-height: 368px) {
+    .about__container {
+      &__title {
+        font-size: 2em;
+      }
+
+      &__description__text {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .about__container {
+    &__title {
+      grid-row: 1/3;
+      font-size: 2.5em;
+    }
+
+    &__description {
+      grid-row: 3/7;
+      grid-column: 1/-1;
+      align-self: center;
+      text-align: center;
+
+      &__text {
+        font-size: 1.1em;
+      }
+    }
+
+    &__skills {
+      grid-row: 6/7;
+      grid-column: 2/6;
+      margin-top: 1em;
+    }
+
+    &__arrow {
+      padding: 0.2em;
+    }
+  }
+
+  .portfolio {
+    display: block;
+    height: 100%;
+
+    &__project {
+      width: 99vw;
+      height: 96vh;
+      margin: 0.45em auto;
+
+      &__container {
+        grid-template-rows: 0.25fr 0.7fr 0.45fr 0.25fr;
+      }
+
+      &:nth-child(odd) {
+        position: relative;
+        left: -100vw;
+        transition: left 200ms ease-out;
+      }
+
+      &:nth-child(even) {
+        position: relative;
+        right: -100vw;
+        transition: right 200ms ease-out;
+      }
+
+      &.active {
+        &:nth-child(odd) {
+          position: relative;
+          left: 0;
+        }
+
+        &:nth-child(even) {
+          position: relative;
+          right: 0;
+        }
+      }
+
+      &__stack {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      }
+
+      &__description {
+        font-size: 0.95em;
+      }
+
+      &__image {
+        height: 230px;
+      }
+    }
+  }
+  @media (min-height: 650px) {
+    .about__container__description__text {
+      font-size: 1.25em;
+    }
+
+    .portfolio__project__description {
+      font-size: 1.025em;
+    }
+  }
+  @media (max-height: 650px) {
+    .about__container {
+      &__title {
+        font-size: 2.5em;
+      }
+
+      &__description__text {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .about__container__title {
+    font-size: 2.2em;
+  }
+
+  .about__container__description__text {
+    font-size: 1.25em;
+  }
+
+  .portfolio__project {
+    &__image {
+      height: 200px;
+    }
+
+    &__description {
+      font-size: 0.85em;
+    }
+
+    &__stack {
+      font-size: 0.85em;
+    }
+  }
+  @media (min-height: 750px) {
+    .about__container__description__text {
+      font-size: 1.4em;
+    }
+
+    .portfolio__project__description {
+      font-size: 0.95em;
+    }
+  }
+  @media (max-height: 650px) {
+    .about__container__description__text {
+      font-size: 1.2em;
+    }
+
+    .portfolio__project__description {
+      font-size: 0.825em;
+    }
+  }
+}
+@media (max-width: 330px) {
+  .about__container__title {
+    font-size: 2.1em;
+  }
+
+  .about__container__description__text {
+    font-size: 1.05em;
+  }
+
+  .about__container__skills {
+    font-size: 0.8em;
+  }
+
+  .portfolio__project__description {
+    font-size: 0.77em;
+  }
+
+  .contact__list__picture {
+    width: 125px;
+    height: 125px;
+  }
+  @media (max-height: 540px) {
+    .about__container__description__text {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@supports not (display: grid) {
+  .about {
+    display: float;
+    height: 100%;
+
+    &__container {
+      display: flex;
+      height: 100%;
+
+      &__title {
+        display: flex;
+        flex: 1;
+      }
+    }
   }
 }
