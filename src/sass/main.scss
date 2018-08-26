@@ -45,7 +45,6 @@ $stackBgColor: #13030d;
       font-family: "Maven Pro", sans-serif;
       color: #ddd4;
       text-shadow: -3px 1px 50px #ddd3;
-      transition: color 10 ease-in-out;
 
       h2:nth-child(1) {
         display: flex;
@@ -154,7 +153,7 @@ $stackBgColor: #13030d;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 0.4em;
+  margin-top: 0.3em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center;
@@ -163,13 +162,14 @@ $stackBgColor: #13030d;
     display: grid;
     width: 49vw;
     height: 99vh;
-    background-color: white;
-    border: solid 5px $customFuschia;
-    box-shadow: 0 2px 3px #000;
+    background-color: #db0033ed;
+    border: solid 4px $customFuschia;
+    box-shadow: 0 0 5px #004;
     text-align: center;
     font-family: "Play", sans-serif;
     font-size: 1.2em;
-    color: $customFuschia;
+    color: #fff;
+    border-radius: 2px;
 
     &:nth-child(odd) {
       position: relative;
@@ -203,11 +203,14 @@ $stackBgColor: #13030d;
       width: 98%;
       height: 98%;
       border: solid 5px #33ccff;
+      box-shadow: 0px 2px 3px #0a0a0a;
     }
 
     &__title {
       align-self: center;
       font-size: 1.3em;
+      color: #33ccff;
+      text-shadow: 0 1px 2px #000;
     }
 
     &__image {
@@ -221,6 +224,7 @@ $stackBgColor: #13030d;
       font-size: 0.95em;
       margin: 0 auto;
       width: 80%;
+      text-shadow: 0 1px 1px #000;
     }
 
     &__stack {
@@ -232,6 +236,7 @@ $stackBgColor: #13030d;
         width: 100%;
         font-size: 1.5em;
         text-shadow: 0 1px 2px #000;
+        color: #33ccff;
       }
     }
   }
@@ -239,9 +244,9 @@ $stackBgColor: #13030d;
 
 .contact {
   display: grid;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   height: 25vh;
-  background-color: $customFuschia;
+  background: linear-gradient(to bottom, #db0033 0%, #33ccff 100%);
   box-shadow: 0 -2px 3px #004;
 
   &__list__picture {

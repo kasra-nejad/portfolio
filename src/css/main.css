@@ -36,8 +36,7 @@
       letter-spacing: 0.02em;
       font-family: "Maven Pro", sans-serif;
       color: #ddd4;
-      text-shadow: -3px 1px 50px #ddd3;
-      transition: color 10 ease-in-out; }
+      text-shadow: -3px 1px 50px #ddd3; }
       .about__container__title h2:nth-child(1) {
         display: flex;
         grid-column: 1/2; }
@@ -116,7 +115,7 @@
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   height: 200vh;
-  margin-top: 0.4em;
+  margin-top: 0.3em;
   background-color: #f9f4f8;
   justify-items: center;
   align-items: center; }
@@ -124,13 +123,14 @@
     display: grid;
     width: 49vw;
     height: 99vh;
-    background-color: white;
-    border: solid 5px #db0033;
-    box-shadow: 0 2px 3px #000;
+    background-color: #db0033ed;
+    border: solid 4px #db0033;
+    box-shadow: 0 0 5px #004;
     text-align: center;
     font-family: "Play", sans-serif;
     font-size: 1.2em;
-    color: #db0033; }
+    color: #fff;
+    border-radius: 2px; }
     .portfolio__project:nth-child(odd) {
       position: relative;
       left: -50vw;
@@ -152,10 +152,13 @@
       justify-self: center;
       width: 98%;
       height: 98%;
-      border: solid 5px #33ccff; }
+      border: solid 5px #33ccff;
+      box-shadow: 0px 2px 3px #0a0a0a; }
     .portfolio__project__title {
       align-self: center;
-      font-size: 1.3em; }
+      font-size: 1.3em;
+      color: #33ccff;
+      text-shadow: 0 1px 2px #000; }
     .portfolio__project__image {
       border-radius: 3px;
       margin: auto;
@@ -164,7 +167,8 @@
     .portfolio__project__description {
       font-size: 0.95em;
       margin: 0 auto;
-      width: 80%; }
+      width: 80%;
+      text-shadow: 0 1px 1px #000; }
     .portfolio__project__stack {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
@@ -172,13 +176,14 @@
         display: block;
         width: 100%;
         font-size: 1.5em;
-        text-shadow: 0 1px 2px #000; }
+        text-shadow: 0 1px 2px #000;
+        color: #33ccff; }
 
 .contact {
   display: grid;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   height: 25vh;
-  background-color: #db0033;
+  background: linear-gradient(to bottom, #db0033 0%, #33ccff 100%);
   box-shadow: 0 -2px 3px #004; }
   .contact__list__picture {
     width: 150px;
