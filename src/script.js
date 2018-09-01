@@ -1,7 +1,7 @@
 (function() {
   "use strict";
   const portfolio = document.querySelector("#portfolio");
-  const projects = document.querySelectorAll(".portfolio__project");
+  const cards = document.querySelectorAll(".portfolio__card");
 
   //highlight name
   window.addEventListener("load", () => {
@@ -10,32 +10,33 @@
     let offIndex = 0;
 
     let onInterval = setInterval(() => {
-      if (index == 10) {
+      if (index == 9) {
         clearInterval(onInterval);
       }
 
-      letters[index++].classList.add("active-text");
-    }, 50);
+      letters[index++].classList.toggle("active-text");
+    }, 250);
 
     setTimeout(() => {
       let offInterval = setInterval(() => {
-        if (offIndex == 10) {
+        if (offIndex == 9) {
           clearInterval(offInterval);
         }
-        letters[offIndex++].classList.remove("active-text");
-      }, 50);
-    }, 50);
+        letters[offIndex++].classList.toggle("active-text");
+      }, 250);
+    }, 250);
   });
 
-  // slide in projects
-  if (!portfolio.classList.contains("active")) {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > window.innerHeight) {
-        portfolio.classList.add("active");
-        projects.forEach(project => {
-          project.classList.add("active");
-        });
+  // slide show click
+  portfolio.addEventListener("click", () => slideCard());
+
+  const slideCard = e => {
+    cards.forEach(card => {
+      if (card.classList.contains("active")) {
+        card.classList.toggle("active");
+      } else {
+        card.classList.toggle("active");
       }
     });
-  }
+  };
 })();
