@@ -2,6 +2,7 @@
   "use strict";
   const portfolio = document.querySelector("#portfolio");
   const cards = document.querySelectorAll(".portfolio__card");
+  const slideButtons = document.querySelectorAll(".portfolio button");
 
   //highlight name
   window.addEventListener("load", () => {
@@ -15,7 +16,7 @@
       }
 
       letters[index++].classList.toggle("active-text");
-    }, 250);
+    }, 75);
 
     setTimeout(() => {
       let offInterval = setInterval(() => {
@@ -23,12 +24,14 @@
           clearInterval(offInterval);
         }
         letters[offIndex++].classList.toggle("active-text");
-      }, 250);
-    }, 250);
+      }, 75);
+    }, 75);
   });
 
   // slide show click
-  portfolio.addEventListener("click", () => slideCard());
+  slideButtons.forEach(button => {
+    button.addEventListener("click", () => slideCard());
+  });
 
   const slideCard = e => {
     cards.forEach(card => {
