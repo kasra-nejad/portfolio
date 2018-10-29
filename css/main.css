@@ -2,14 +2,15 @@
 html,
 body {
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  scroll-behavior: auto; }
 
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  scroll-behavior: smooth; }
+  scroll-behavior: auto; }
 
 .container {
   background-color: #f9f4f8;
@@ -598,7 +599,7 @@ body {
     .portfolio__card__project__title {
       font-size: 1.3em; }
     .portfolio__card__project__description {
-      font-size: 0.9em;
+      font-size: 0.85em;
       margin-top: 0; }
     .portfolio__card__project__stack {
       width: 100%;
@@ -687,7 +688,7 @@ body {
     .portfolio__card__project__title {
       font-size: 1.25em; }
     .portfolio__card__project__description {
-      font-size: 0.85em; }
+      font-size: 0.8em; }
     .portfolio__card > :nth-child(1) .portfolio__card__project__title {
       grid-column: 2/6;
       grid-row: 2/3; } }
@@ -710,7 +711,7 @@ body {
     .portfolio__card__project__title {
       font-size: 1.1em; }
     .portfolio__card__project__description {
-      font-size: 0.66em; } }
+      font-size: 0.64em; } }
   @media (max-width: 330px) and (max-height: 540px) {
     .about__container__description__text {
       font-size: 0.9em; } }
