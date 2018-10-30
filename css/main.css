@@ -2,6 +2,7 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
   overscroll-behavior-y: auto; }
 
 * {
@@ -13,7 +14,7 @@ body {
 
 .container {
   background-color: #f9f4f8;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100%; }
 
 @supports (display: grid) {
@@ -35,7 +36,7 @@ body {
       align-items: center;
       grid-template: 1fr 0.5fr repeat(5, 1fr)/repeat(6, 1fr);
       width: 94%;
-      height: 100%;
+      height: 95vh;
       margin: 2vh auto; }
       .about__container__title {
         grid-column: 3/5;
@@ -678,7 +679,7 @@ body {
         font-size: 1.25em; } }
   @media (max-width: 460px) and (max-height: 650px) {
     .about__container {
-      height: 87%; }
+      height: 89%; }
       .about__container__title {
         font-size: 2.5em; }
       .about__container__description__text {
