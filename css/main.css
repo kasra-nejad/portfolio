@@ -678,7 +678,7 @@ body {
         font-size: 1.25em; } }
   @media (max-width: 460px) and (max-height: 650px) {
     .about__container {
-      height: 85%; }
+      height: 80%; }
       .about__container__title {
         font-size: 2.5em; }
       .about__container__description__text {
