@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/kasra-nejad/portfolio/issues"
   },
-  "homepage": "https://github.com/kasra-nejad/portfolio",
+  "homepage": "https://kasra-nejad.github.io/portfolio",
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gh-pages": "^2.0.1",

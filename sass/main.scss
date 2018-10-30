@@ -27,7 +27,7 @@ body {
   .about {
     display: grid;
     width: 100%;
-    height: 100vh;
+    height: 98vh;
     background: -webkit-gradient(
       linear,
       left top,
@@ -49,7 +49,7 @@ body {
       align-items: center;
       grid-template: 1fr 0.5fr repeat(5, 1fr) / repeat(6, 1fr);
       width: 94%;
-      height: 96vh;
+      height: 100%;
       margin: 2vh auto;
 
       &__title {
@@ -63,7 +63,7 @@ body {
         left: 0.13em;
         font-size: 5.8em;
         letter-spacing: 0.02em;
-        font-family: "Righteous","Zapf Chancery", cursive;
+        font-family: "Righteous", "Zapf Chancery", cursive;
         color: #ddd4;
         text-shadow: -3px 1px 50px #ddd3;
 
@@ -114,7 +114,7 @@ body {
           background-color: #7b080833;
           text-align: center;
           color: #21016b;
-          font-family: "Cabin",Gill Sans, sans-serif;
+          font-family: "Cabin", Gill Sans, sans-serif;
           -webkit-box-shadow: -2px 4px 5px #210031;
           box-shadow: -2px 4px 5px #210031;
           text-shadow: 0px 1px 1px #b19494ab;
@@ -231,7 +231,7 @@ body {
       height: 100%;
       width: 100%;
       background-color: #db0033ed;
-      font-family: "Play",Helvetica, sans-serif;
+      font-family: "Play", Helvetica, sans-serif;
       font-size: 1.2em;
       color: #fff;
       -webkit-transition: left 100ms cubic-bezier(0.16, 0.18, 0.86, 0.85);
@@ -468,32 +468,32 @@ body {
       color: #d4c0de;
       text-align: center;
       font-size: 1.5rem;
-      font-family: "Righteous","Zapf Chancery", cursive;
+      font-family: "Righteous", "Zapf Chancery", cursive;
       text-shadow: 0px 2px 5px #291122;
     }
   }
 
-  @media (min-width:1440px) {
-      .about__container {
+  @media (min-width: 1440px) {
+    .about__container {
       &__title {
         font-size: 7em;
       }
 
       &__description {
         grid-column: 1/-1;
-        width:80%;
- 
+        width: 80%;
+
         &__text {
           font-size: 1.75em;
           font-weight: 900;
         }
       }
 
-      &__skills{
-        font-size:1.5rem;
+      &__skills {
+        font-size: 1.5rem;
       }
 
-      &__arrow{
+      &__arrow {
         font-size: 4em;
       }
     }
@@ -511,8 +511,8 @@ body {
       }
     }
 
-    .footer__description{
-      font-size:2.4rem;
+    .footer__description {
+      font-size: 2.4rem;
     }
   }
 
@@ -994,7 +994,7 @@ body {
             font-size: 1.3em;
           }
           &__description {
-            font-size: 0.95em;
+            font-size: 0.85em;
             margin-top: 0;
           }
           &__stack {
@@ -1104,8 +1104,11 @@ body {
       }
     }
     @media (min-height: 650px) {
-      .about__container__description__text {
-        font-size: 1.25em;
+      .about__container {
+        height: 91%;
+        &__description__text {
+          font-size: 1.25em;
+        }
       }
     }
     @media (max-height: 650px) {
@@ -1135,7 +1138,7 @@ body {
           font-size: 1.25em;
         }
         &__description {
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
       > :nth-child(1) {
@@ -1180,7 +1183,7 @@ body {
         font-size: 1.1em;
       }
       &__description {
-        font-size: 0.7em;
+        font-size: 0.64em;
       }
     }
 
