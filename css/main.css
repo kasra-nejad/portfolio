@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Play|Cabin|Righteous");
 html,
 body {
-  height: 100%;
-  overflow: hidden;
-  overscroll-behavior-y: auto; }
+  height: 100%; }
 
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  overscroll-behavior-y: auto; }
+  scroll-behavior: smooth; }
 
 .container {
   background-color: #f9f4f8;
