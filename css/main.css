@@ -202,8 +202,12 @@ body {
             padding: 0;
             text-decoration: none;
             color: #fff; }
+            .portfolio__card__project__title > a:hover {
+              color: #fc9ddc; }
             .portfolio__card__project__title > a:visited {
               color: #fff; }
+              .portfolio__card__project__title > a:visited:hover {
+                color: #fc9ddc; }
         .portfolio__card__project__description {
           padding: 0.15rem;
           justify-self: center;
@@ -214,8 +218,12 @@ body {
           .portfolio__card__project__description > a {
             color: #fff;
             text-decoration: none; }
+            .portfolio__card__project__description > a:hover {
+              color: #fc9ddc; }
             .portfolio__card__project__description > a:visited {
               color: #fff; }
+              .portfolio__card__project__description > a:visited:hover {
+                color: #fc9ddc; }
         .portfolio__card__project__stack {
           display: flex;
           flex-direction: column;
