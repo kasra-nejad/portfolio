@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
+const imagemin = require("gulp-imagemin");
 
 // Compile Sass & Inject Into Browser
 gulp.task("sass", function() {
@@ -20,6 +21,14 @@ gulp.task("serve", ["sass"], function() {
   gulp.watch(["./sass/*.scss"], ["sass"]);
   gulp.watch("src/*.html").on("change", browserSync.reload);
   gulp.watch("src/*.js").on("change", browserSync.reload);
+});
+
+//Image task
+gulp.task("image", function() {
+  gulp
+    .src("src/images/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("src/images"));
 });
 
 // Default Task
