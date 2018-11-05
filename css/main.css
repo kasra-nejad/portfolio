@@ -185,13 +185,13 @@ body {
           justify-self: center;
           width: 80%; }
         .portfolio__container__card.taskManager {
-          background-image: url("./images/taskmanager.png"); }
+          background-image: url("images/taskmanager.png"); }
         .portfolio__container__card.bestDeal {
-          background-image: url("./images/best_deal.png"); }
+          background-image: url("images/best_deal.png"); }
         .portfolio__container__card.caspianTile {
-          background-image: url("./images/caspian.png"); }
+          background-image: url("images/caspian.png"); }
         .portfolio__container__card.calculator {
-          background-image: url("./images/calculator.png"); }
+          background-image: url("images/calculator.png"); }
         .portfolio__container__card__title {
           font-size: 1.5rem; }
         .portfolio__container__card__description {
