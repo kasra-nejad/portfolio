@@ -154,7 +154,7 @@ body {
       transform: rotateY(180deg); } }
   .portfolio {
     width: 100%;
-    height: 150%;
+    height: 200%;
     margin-top: 0.3rem;
     background-color: #b18cb9;
     box-shadow: 0 -2px 3px #004; }
@@ -164,7 +164,7 @@ body {
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-auto-rows: 1fr;
       align-items: center;
       justify-items: center; }
       .portfolio__container__card {
@@ -192,6 +192,8 @@ body {
           background-image: url("../images/caspian.png"); }
         .portfolio__container__card.calculator {
           background-image: url("../images/calculator.png"); }
+        .portfolio__container__card.year {
+          background-image: url("../images/year.png"); }
         .portfolio__container__card__title {
           font-size: 1.5rem; }
         .portfolio__container__card__description {
@@ -390,7 +392,7 @@ body {
     .about__container__arrow {
       padding: 0.2em; }
     .portfolio {
-      height: 250%; }
+      height: 275%; }
       .portfolio__container {
         width: 100%;
         grid-template-columns: 1fr;

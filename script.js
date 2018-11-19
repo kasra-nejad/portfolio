@@ -27,19 +27,4 @@
       }, 75);
     }, 75);
   });
-
-  // slide show click
-  slideButtons.forEach(button => {
-    button.addEventListener("click", () => slideCard());
-  });
-
-  const slideCard = e => {
-    cards.forEach(card => {
-      if (card.classList.contains("active")) {
-        card.classList.toggle("active");
-      } else {
-        card.classList.toggle("active");
-      }
-    });
-  };
 })();
