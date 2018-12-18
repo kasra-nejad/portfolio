@@ -64,7 +64,7 @@ body {
           top: -0.3em;
           left: -0.13em; }
         .about__container__title .letters {
-          color: #ddd4;
+          color: rgba(221, 221, 221, 0.267);
           -webkit-transition: color 100ms cubic-bezier(0.42, 0, 0.63, 0.86), text-shadow 300ms cubic-bezier(0.42, 0, 0.63, 0.86);
           -o-transition: color 300ms cubic-bezier(0.42, 0, 0.63, 0.86), text-shadow 300ms cubic-bezier(0.42, 0, 0.63, 0.86);
           transition: color 100ms cubic-bezier(0.42, 0, 0.63, 0.86), text-shadow 300ms cubic-bezier(0.42, 0, 0.63, 0.86); }
@@ -124,7 +124,7 @@ body {
         padding: 0.1em 0.25em;
         font-size: 2.5em;
         text-decoration: none;
-        color: #eee7;
+        color: rgba(238, 238, 238, 0.467);
         -webkit-animation-name: spin;
         animation-name: spin;
         -webkit-animation-duration: 1100ms;
@@ -133,7 +133,7 @@ body {
         animation-iteration-count: infinite; }
         .about__container__arrow a {
           text-decoration: none;
-          color: #eee7; }
+          color: rgba(238, 238, 238, 0.467); }
           .about__container__arrow a:visited {
             color: #eee7; }
         .about__container__arrow:hover {
@@ -292,7 +292,7 @@ body {
     .about__container__description__text {
       font-size: 1em; }
     .portfolio {
-      height: 250%; }
+      height: 300%; }
       .portfolio__container__card__title {
         font-size: 1.4rem; }
       .portfolio__container__card__description {
@@ -458,4 +458,15 @@ body {
       font-size: 0.9em; } }
   @media (min-height: 1000px) {
     .about__container__description__text {
-      font-size: 2.5em; } } }
+      font-size: 2.5em; } }
+  @supports not (background-blend-mode: screen) {
+    .portfolio__container__card.taskManager {
+      background-image: none; }
+    .portfolio__container__card.bestDeal {
+      background-image: none; }
+    .portfolio__container__card.caspianTile {
+      background-image: none; }
+    .portfolio__container__card.year {
+      background-image: none; }
+    .portfolio__container__card.calculator {
+      background-image: none; } } }
